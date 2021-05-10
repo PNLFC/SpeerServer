@@ -4,7 +4,7 @@
   "description": "",
   "main": "api.js",
   "scripts": {
-    "server": "env-cmd -f ./config/dev.env node src/api.js",
+    "start": "env-cmd -f ./config/dev.env node src/api.js",
     "test": "env-cmd -f ./config/test.env jest --runInBand --watchAll"
   },
   "jest": {
