@@ -2,12 +2,10 @@ const request = require('supertest');
 const api = require('../src/api');
 const Tweet = require('../src/models/tweet');
 const {setupDatabase,
-    userOneId,
     userOne,
     userTwoId,
     userTwo,
     tweetOneId,
-    tweetTwoId
 } = require('./fixtures/db');
 
 beforeEach(setupDatabase);

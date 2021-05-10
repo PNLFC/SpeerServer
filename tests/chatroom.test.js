@@ -4,8 +4,6 @@ const {setupDatabase,
     userOneId,
     userOne,
     userTwoId,
-    userTwo,
-    tweetOneId,
     chatroomId
 } = require('./fixtures/db');
 
@@ -28,7 +26,6 @@ test('userOne should add chat to Chatroom', async () => {
     .set('Authorization', `Bearer ${userOne.tokens[0].token}`)
     .send({ message: "I'm good"})
     .expect(201)
-    console.log(response.body)
     expect(response.body).not.toBeNull()
     expect(response.body.chats.length).toEqual(2)
 })

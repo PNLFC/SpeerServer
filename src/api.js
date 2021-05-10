@@ -4,12 +4,9 @@ const userRouter = require('./routers/user');
 const tweetRouter = require('./routers/tweet');
 const chatroomRouter = require('./routers/chatroom');
 
-//const { ChatRoom, Chat } = require('./models/chatRoom');
-
-
 const api = express()
 
-api.use(function(req, res, next) {
+api.use(function(req, res, next){
     res.header("Access-Control-Allow-Origin", "*");
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -20,6 +17,5 @@ api.use(express.json());
 api.use(userRouter);
 api.use(tweetRouter);
 api.use(chatroomRouter);
-
 
 module.exports = api;
