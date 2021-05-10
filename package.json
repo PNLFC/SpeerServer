@@ -4,7 +4,7 @@
   "description": "",
   "main": "api.js",
   "scripts": {
-    "start": "env-cmd -f ./config/dev.env node src/api.js",
+    "start": "env-cmd -f ./config/dev.env node src/index.js",
     "test": "env-cmd -f ./config/test.env jest --runInBand --watchAll"
   },
   "jest": {
@@ -17,6 +17,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "dotenv": "^9.0.1",
+    "env-cmd": "^10.1.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.6",
