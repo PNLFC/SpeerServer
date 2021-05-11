@@ -1,0 +1,20 @@
+version: '3'
+services:
+  serverapi:
+    restart: on-failure
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - /app/node_modules
+      - .:/app
+    links: 
+      - twitmongo
+  twitmongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes: 
+      - mongodb:/data/db
+volumes:
+  mongodb:

@@ -4,10 +4,10 @@ const auth = require('../middleware/auth');
 const router = new express.Router();
 
 router.post('/tweet',auth, async (req,res) => {
-    const tweet = new Tweet({
-        ...req.body,
-        owner: req.user._id})
     try{
+        const tweet = new Tweet({
+            ...req.body,
+            owner: req.user._id})
         await tweet.save()
         res.status(201).send(tweet)
     }catch(e){
